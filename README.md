@@ -1,4 +1,4 @@
-<head>       <style>
+<style>
             body{
                 background:red;
             }
@@ -45,7 +45,6 @@
                 top: 213px; 
             }
         </style>
-    </head>
         <button class="add" id="a">sugjested</button>
         <button class="add" id="b">sugjested</button>
         <button class="add" id="c">sugjested</button>
