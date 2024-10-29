@@ -1,54 +1,50 @@
-<style>
-            body{
-                background:red;
-            }
-            #text{
-                position: fixed;
+<head>
+        <meta charset="utf-8">
+        <title>A.R.C. books</title>
+        <style>
+            #page{
                 text-align: center;
-                background: rgb(38, 250, 0,40%);
-                left: 15%;
-                width: 56%;
-                margin: 41px;
-                height: 315px;
+            }
+            #book{
                 overflow: auto;
+                width: 100%;
+                height: 450px;
             }
-            h2{
-                background: rgb(255, 0, 0,70%);
-                position: fixed;
-                left: 0;
-                right: 0;
-                top: -59px;
-                margin: 68px;
+            button{
+                background: rgb(40, 237, 0);
             }
-            .add{
-                position: fixed;
+            #sign-in-form{
                 text-align: center;
-                background: rgb(0, 0, 0,40%);
-                width: 123px;
-                height: 154px;
+                margin: 14%;
+            }
+            #books{
                 overflow: auto;
+                height: 115px;
+                border: 2px solid red;
+                border-radius: 12px;
             }
-            #a{
-                left: 0.5%;
-                top: 43px; 
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div id="sign-in-form">
+                <input id="name">
+                <button onClick="check()">sign in</button>
+            </div>
+        </div>    
+    <script>
+        function check (){
+            if(document.getElementById("name").value==="ARCoder"||document.getElementById("name").value==="test"||document.getElementById("name").value==="tsc"){
+            start();
             }
-            #b{
-                left: 0.5%;
-                top: 213px; 
-            }
-            #c{
-                left: 78.9%;
-                top: 43px; 
-            }
-            #d{
-                left: 78.9%;
-                top: 213px; 
-            }
-        </style><body>
-        <button class="add" id="a">sugjested</button>
-        <button class="add" id="b">sugjested</button>
-        <button class="add" id="c">sugjested</button>
-        <button class="add" id="d">sugjested</button>
-        <h2>Blogger</h2>
-        <div id="text">
-        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></body>
+        }        
+        function prank (){
+            document.getElementById("book").innerHTML="<h1>Prankster <em>and his</em> Neighbor</h1><hr><h2>Intro</h2><hr><p>Prankster did not like his Neighbor so he pranks him therefor everyone calls him Prankster.</p><hr><h2>Chapter 1</h2><hr><p>Prankster asked his Neighbor if he wanted to have lunch with him, his Neighbor said of course. Why not? so Prankster </p>";
+        }
+        function war (){
+            document.getElementById("book").innerHTML="";
+        }
+        function start (){
+            document.getElementById("page").innerHTML='<div id="book"></div>        <div id="books">        <button onClick="prank()">        <svg style="width:80;height:98;cursor:pointer;border-radius:5px">        <rect width="80" height="95" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />        <path d="M 40 49 22 12 10 49" stroke="rgb(255, 0,0)" fill="rgb(9, 255, 0)" stroke-width="2" transform="scale(0.9,0.9) translate(-2,0)">        </path>    <path d="M 36 35  13 35" stroke="rgb(255, 0,0)" fill="rgb(255, 130, 255)" stroke-width="2" transform="scale(0.9,0.9) translate(-2,0)"></path>    <text x="7" y="73">Prankester</text></svg></button>    <button onClick="war()">        <svg style="width:80;height:98;cursor:pointer;border-radius:5px">        <rect width="80" height="95" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />        <path d="M 40 49 22 12 10 49" stroke="rgb(255, 0,0)" fill="rgb(9, 255, 0)" stroke-width="2" transform="scale(0.9,0.9)translate(-2,0)">        </path>    <path d="M 36 35  13 35" stroke="rgb(255, 0,0)" fill="rgb(255, 130, 255)" stroke-width="2" transform="scale(0.9,0.9) translate(-2,0)"></path>    <text x="5" y="73">Clown War</text></svg></button>    <button onClick="war()">        <svg style="width:80;height:98;cursor:pointer;border-radius:5px">    <rect width="80" height="95" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />    <text x="4" y="30" font-size="30">TSC</text>    <text x="4" y="51" font-size="15">No Title</text>   </svg></button>    </div>';
+        }
+    </script>
